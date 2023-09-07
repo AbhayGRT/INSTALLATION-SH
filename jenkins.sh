@@ -4,7 +4,7 @@
 sudo apt update
 
 # Install the OpenJDK 17 JRE
-sudo apt install openjdk-17-jre
+sudo apt install openjdk-17-jre -y
 
 # Check the Java version
 java -version
@@ -22,4 +22,4 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt update
 
 # Install Jenkins
-sudo apt-get install jenkins
+sudo apt-get install jenkins -y
