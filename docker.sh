@@ -19,4 +19,4 @@ sudo docker run hello-world
 
 
 # sudo apt install docker.io
-# sudo chown $USER /var/run/docker.sock
+sudo chown $USER /var/run/docker.sock
