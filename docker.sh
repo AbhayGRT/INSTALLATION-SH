@@ -20,3 +20,12 @@ sudo docker run hello-world
 
 # sudo apt install docker.io
 sudo chown $USER /var/run/docker.sock
+
+# Command for stopping all containers
+docker stop $(docker ps -a -q) 
+
+#Command for removing all containers
+docker rm $(docker ps -a -q)
+
+# Command for removing all images
+docker rmi $(docker images -qa)
