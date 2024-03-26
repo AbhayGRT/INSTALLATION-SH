@@ -1,0 +1,4 @@
+python -m venv <environment-name>
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+cd .\venv\Scripts\
+.\activate
