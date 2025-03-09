@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Some of the applications maybe there I am just sure that it didn't create any error
+sudo apt update
+sudo apt install gnome-terminal jq lsof xdg-utils python3 python3-pip python3-venv coreutils gnome-settings-daemon findutils
+
 echo "Going to the home folder"
 cd ~
 
