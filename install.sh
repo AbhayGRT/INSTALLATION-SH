@@ -12,6 +12,8 @@ git clone https://github.com/AbhayGRT/Deployment.git
 
 cd Deployment
 
+sudo chmod 755 -R Deployment
+
 echo "Activating Virtual Environment"
 python3 -m venv deployment
 
