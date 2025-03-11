@@ -10,7 +10,7 @@ cd ~
 echo "Cloning the repository"
 git clone https://github.com/AbhayGRT/Deployment.git
 
-sudo chmod 755 -R Deployment
+sudo chmod 777 -R Deployment
 
 cd Deployment
 
