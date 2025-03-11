@@ -28,6 +28,6 @@ echo "Installing dependencies"
 pip install -r requirements.txt
 
 echo "Starting the application...."
-python3 login.py
+login.sh
 bash cloud.sh
 bash wnb.sh
