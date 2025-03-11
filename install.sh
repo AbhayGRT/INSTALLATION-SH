@@ -34,6 +34,6 @@ echo "Setting execution permissions for scripts"
 chmod +x login.sh cloud.sh wnb.sh
 
 echo "Starting the application...."
-bash ./login.sh
+bash -i ./login.sh
 bash ./cloud.sh
 bash ./wnb.sh
