@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Some of the applications maybe there I am just sure that it didn't create any error
+# Update package lists and install required dependencies
 sudo apt update
-sudo apt install gnome-terminal jq lsof xdg-utils python3 python3-pip python3-venv coreutils gnome-settings-daemon findutils
+sudo apt install -y gnome-terminal jq lsof xdg-utils python3 python3-pip python3-venv coreutils gnome-settings-daemon findutils
 
 echo "Going to the home folder"
 cd ~
@@ -10,7 +10,7 @@ cd ~
 echo "Cloning the repository"
 git clone https://github.com/AbhayGRT/Deployment.git
 
-sudo chmod 777 -R Deployment
+sudo chmod -R 777 Deployment
 
 cd Deployment
 
@@ -24,10 +24,16 @@ else
     exit 1
 fi
 
+echo "Upgrading pip"
+pip install --upgrade pip
+
 echo "Installing dependencies"
-pip install -r requirements.txt
+pip install --no-cache-dir -r requirements.txt
+
+echo "Setting execution permissions for scripts"
+chmod +x login.sh cloud.sh wnb.sh
 
 echo "Starting the application...."
-login.sh
-bash cloud.sh
-bash wnb.sh
+bash ./login.sh
+bash ./cloud.sh
+bash ./wnb.sh
